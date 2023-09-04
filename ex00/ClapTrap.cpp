@@ -3,26 +3,22 @@
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src)
 {
-	std::cout << "New claptrap is being replicated" << std::endl;
 	this->Attackdamage = src.Attackdamage;
 	this->Energypoints = src.Energypoints;
 	this->Hitpoints = src.Hitpoints;
 	this->Name = src.Name;
+	std::cout << "New claptrap " << src.Name << " got replicated" << std::endl;
 	return (*this);
 }
 
 ClapTrap::ClapTrap(ClapTrap& src)
 {
-	std::cout << "New claptrap is being replicated" << std::endl;
-	this->Attackdamage = src.Attackdamage;
-	this->Energypoints = src.Energypoints;
-	this->Hitpoints = src.Hitpoints;
-	this->Name = src.Name;
+	*this = src;
 }
 
 ClapTrap::ClapTrap(std::string givenName) : Name(givenName), Hitpoints(10), Energypoints(10), Attackdamage(0)
 {
-	std::cout << "New claptrap is being built" << std::endl;
+	std::cout << "New claptrap " << givenName << " is being built" << std::endl;
 }
 
 ClapTrap::~ClapTrap()

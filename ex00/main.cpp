@@ -4,6 +4,7 @@ int main(void)
 {
 	ClapTrap	trap("rapp");
 	ClapTrap	late("noname");
+	ClapTrap	jake(late);
 	late = trap;
 	trap.attack("Door");
 	trap.attack("Door");
