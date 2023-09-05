@@ -17,6 +17,7 @@ int main(void)
 	std::cout << GaGu.getName() << " has " << GaGu.getEp() << " Energypoints" << std::endl;
 	GaGu.attack("the same tree");
 	std::cout << GaGu.getName() << " has " << GaGu.getEp() << " Energypoints" << std::endl;
+	cpycat.highFivesGuys();
 
 	return (0);
 }
